@@ -28,6 +28,12 @@ model User {
   posts   Post[]
 }
 
+model Journalentries {
+  entryid      String   @id @default(auto()) @map("_id") @db.ObjectId
+  postcontent String
+  createdBy String
+}
+
 model Comment {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
   comment String

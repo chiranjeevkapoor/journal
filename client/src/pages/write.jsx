@@ -1,8 +1,8 @@
 import styles from '@/styles/Home.module.css'
 import Calcomp from '@/components/calendar'
 import 'react-calendar/dist/Calendar.css';
-import MyEditor from '@/components/editor';
-import 'draft-js/dist/Draft.css';
+//import MyEditor from '@/components/editor';
+//import 'draft-js/dist/Draft.css';
 import {useEffect, useState} from "react"
 // import Myneweditor from '@/components/myeditor';
 import dynamic from "next/dynamic"

@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const prisma = require('./db/connection')
 const createuserRouter = require('./routes/createuser')
+const createjournalentryRouter = require('./routes/createjournalentry')
 const cors = require('cors')
 app.use(cors())
 app.use(express.json());
@@ -51,6 +52,7 @@ app.use(express.json());
 
 
 app.use('/createuser', createuserRouter);
+app.use('/createjournalentry', createjournalentryRouter);
 
 app.listen(8000, async ()=>{
     await prisma.$connect().then(()=>console.log('database connected'))

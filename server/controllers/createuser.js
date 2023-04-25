@@ -20,7 +20,7 @@ const createuser = async (req,res) => {
         res.send(`user logged in with id: ${userobject.id}`)
     }
 }
-
+//checks if the user exists in the database
 const checkuserindb = async (email) =>{
     const user = await prisma.user.findUnique({
         where:{
@@ -29,7 +29,7 @@ const checkuserindb = async (email) =>{
     })
     return user
 }
-
+//inserts a new user into the database
 const insertuserindb = async (email, name) =>{
     await prisma.user.create({
         data:{
